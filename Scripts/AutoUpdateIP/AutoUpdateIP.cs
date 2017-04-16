@@ -64,7 +64,7 @@ class Messenger {
     public void DoActions(Object stateInfo)
     {
         AutoResetEvent autoEvent = (AutoResetEvent)stateInfo;
-
+        
         AccessCapsule(); // accesses Capsule and sets myIP.
                         // this seems like really shitty programming. It's not obvious that AccessCapsule sets myIP
         if(myIP != String.Empty)
@@ -93,7 +93,8 @@ class Messenger {
 
     public void AccessCapsule()
     {
-        string url = "http://www.capsule03.com/s/sconnect-b.php";
+        string url = credentials.LoginCreds.targetPage;
+
         System.Net.WebClient wc = new System.Net.WebClient();
        
         string serverResponse = ConnectToCapsule(wc, url);
@@ -114,9 +115,10 @@ class Messenger {
 
         NameValueCollection data = new NameValueCollection();
         data.Add("login","");
-        data.Add("username","artemis");
-        data.Add("password","falls");
+        data.Add("username",credentials.LoginCreds.username);
+        data.Add("password",credentials.LoginCreds.password);
         data.Add("message","Checking in, " + (++currentCount).ToString());
+        data.Add("friendlyname",credentials.LoginCreds.friendlyName);
        
         byte[] responseBytes = null; 
         
