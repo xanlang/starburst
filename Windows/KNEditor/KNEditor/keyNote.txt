@@ -1,0 +1,18 @@
+Top
+Mid
+Bot
+Jungle
+Support
+
+T1	Trundle	Top
+J1	Ivern	Jungle
+T2	Poppy is awesome	Top
+T3	Kled and Skarl	Top
+M1	Ahri <3	Mid
+M2	Taliyah	Mid
+BAN	Fizz	Mid
+S1	Rakan	Support
+M3	Zed	Mid
+M4	Lulu	Mid
+M5	Ekko	Mid
+M6	This is a really long string to demonstrate that we can also have keynotes with a lot of text, but that's ok. Make sure you can use "quotations" and / backslash, etc.	Mid

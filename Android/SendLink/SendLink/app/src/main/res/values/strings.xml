@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SendLink</string>
+    <string name="hintText">Enter URL</string>
+    <string name="button_send">Send Link</string>
+    <string name="sendlink">sendlink!anlknvdkj</string>
+    <string name="username">android</string>
+</resources>
