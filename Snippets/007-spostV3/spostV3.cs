@@ -41,7 +41,7 @@ class Messager {
     public void SendMessage(Object stateInfo)
     {
         AutoResetEvent autoEvent = (AutoResetEvent)stateInfo;
-        string url="http://www.capsule03.com/s/sconnect-a.php";
+        string url="http://www.capsule03.com/S/sconnect-a.php";
         System.Net.WebClient wc = new System.Net.WebClient();
 
         NameValueCollection data = new NameValueCollection();
