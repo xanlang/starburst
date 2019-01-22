@@ -1,2 +1,2 @@
 #!/bin/bash
-exec -a xanAutoIP ./AutoUpdateIP
+exec -a xanAutoIP /home/xanlan/Documents/Programming/git-repos/starburst/Scripts/AutoUpdateIP/bin/AutoUpdateIP
