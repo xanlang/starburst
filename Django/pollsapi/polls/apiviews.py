@@ -60,3 +60,4 @@ class LogoutView(APIView):
     authentication_classes = ()
     logout()
 
+            return Response({"error": "Wrong Credentials", "user:": username}, status=status.HTTP_400_BAD_REQUEST)
