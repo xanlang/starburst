@@ -7,7 +7,7 @@ from rest_framework import viewsets
 from .models import Poll, Choice
 from .serializers import PollSerializer, VoteSerializer, ChoiceSerializer, UserSerializer
 
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, logout
 
 class PollViewSet(viewsets.ModelViewSet):
     queryset = Poll.objects.all()
@@ -54,3 +54,9 @@ class LoginView(APIView):
             return Response({"token":user.auth_token.key})
         else:
             return Response({"error": "Wrong Credentials"}, status=status.HTTP_400_BAD_REQUEST)
+
+class LogoutView(APIView):
+    permission_classes = ()
+    authentication_classes = ()
+    logout()
+
