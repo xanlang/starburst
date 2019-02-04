@@ -10,8 +10,6 @@ from .serializers import PollSerializer, VoteSerializer, ChoiceSerializer, UserS
 from django.contrib.auth import authenticate, logout
 
 class PollViewSet(viewsets.ModelViewSet):
-    authentication_classes = ()
-    permission_classes = ()
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
 
@@ -64,3 +62,4 @@ class LogoutView(APIView):
         # Logout the user when they load the page
         logout(request)
         return Response({"message": "You have been logged out."}, status=status.HTTP_200_OK)
+
