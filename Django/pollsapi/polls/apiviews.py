@@ -58,6 +58,6 @@ class LoginView(APIView):
 class LogoutView(APIView):
     permission_classes = ()
     authentication_classes = ()
-    logout()
-
-            return Response({"error": "Wrong Credentials", "user:": username}, status=status.HTTP_400_BAD_REQUEST)
+    def get(self, request):
+        # Logout the user when they load the page
+        logout(request)
