@@ -10,6 +10,8 @@ from .serializers import PollSerializer, VoteSerializer, ChoiceSerializer, UserS
 from django.contrib.auth import authenticate, logout
 
 class PollViewSet(viewsets.ModelViewSet):
+    authentication_classes = ()
+    permission_classes = ()
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
 
